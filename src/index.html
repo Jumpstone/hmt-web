@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMT</title>
+    <link
+      rel="icon"
+      href="/assets/img/V4.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/discord-tooltip.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/github-button.css"
+    />
+    <link rel="stylesheet" href="/assets/css/socials.css" />
+    <link rel="stylesheet" href="/assets/css/source-button.css" />  </head>
+  <body>
+    <div class="bg-animation"></div>
+    <div id="header-container"></div>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <img
+            src="/assets/img/V4.png"
+            alt="HMT Logo"
+            class="hero-logo"
+          />
+          <div id="animation" class="large grid centered square-grid">
+            <h2
+              class="hero-title animated-heading"
+              style="font-size: 4rem; font-weight: bold; margin: 0"
+            >
+              HMT
+            </h2>
+          </div>
+
+          <div class="btn-container">
+            <a href="#projects" class="cta-button">Unsere Projekte</a>
+            <a
+              href="https://hmt-network.de/dc"
+              class="cta-button btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discord beitreten</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Projekte</h2>
+          <div class="projects-grid">
+            <!-- Projekte werden hier dynamisch eingefügt -->
+          </div>
+        </div>
+      </section>
+
+      <section class="social-section">
+        <div class="social-container">
+          <h2>Verbinde dich mit uns</h2>
+          <p class="social-description">
+            Tritt unserer Discord-Community bei und erhalte direkten Support,
+            Updates und tausche dich mit anderen Nutzern aus!
+          </p>
+          <div class="tooltip-container">
+            <div class="tooltip">
+              <div class="profile">
+                <div class="user">
+                  <img
+                    src="/assets/img/V4.png"
+                    alt="GrüneEule Logo"
+                    class="img"
+                  />
+                  <div class="details">
+                    <div class="name">HMT</div>
+                    <div class="username">Discord Guild</div>
+                  </div>
+                </div>
+                <div class="about">Community</div>
+              </div>
+            </div>
+            <div class="text">
+              <a
+                href="https://hmt-network.de/dc"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="layer">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="fab">
+                    <svg
+                      preserveAspectRatio="xMidYMid"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -3.117 28 28"
+                      height="35"
+                      width="35"
+                    >
+                      <path
+                        fill="#5865F2"
+                        d="M23.719 1.815A22.8 22.8 0 0 0 17.942 0c-.249.45-.54 1.055-.74 1.536q-3.231-.486-6.402 0C10.6 1.055 10.302.45 10.051 0A22.7 22.7 0 0 0 4.27 1.82C.614 7.344-.377 12.731.119 18.042c2.425 1.811 4.775 2.911 7.085 3.63a17.6 17.6 0 0 0 1.517-2.499 15 15 0 0 1-2.389-1.163 12 12 0 0 0 .586-.463c4.607 2.155 9.613 2.155 14.165 0a14 14 0 0 0 .586.463 15 15 0 0 1-2.394 1.165c.438.877.945 1.714 1.517 2.499 2.312-.72 4.664-1.82 7.089-3.633.581-6.156-.993-11.494-4.162-16.227M9.349 14.776c-1.383 0-2.517-1.291-2.517-2.863s1.11-2.866 2.517-2.866 2.541 1.291 2.517 2.866c.002 1.572-1.11 2.863-2.517 2.863m9.302 0c-1.383 0-2.517-1.291-2.517-2.863s1.11-2.866 2.517-2.866 2.541 1.291 2.517 2.866c0 1.572-1.11 2.863-2.517 2.863"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="discord-text">Discord</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div id="footer-container"></div>
+    </main>
+
+    <button class="scroll-top" aria-label="Nach oben scrollen">↑</button>
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+      // Nur das h2 mit der Klasse 'hero-title' oder 'animated-heading' animieren
+      const split = new SplitType(".hero-title", { types: "chars" }); // Geändert zu .hero-title
+      const chars = split.chars;
+
+      // Gradient auf jedes Zeichen anwenden
+      chars.forEach((char) => {
+        char.style.background =
+          "linear-gradient(90deg, #2e8b57, #ff7f50, #8a2be2)";
+        char.style.backgroundSize = "300% 300%";
+        char.style.webkitBackgroundClip = "text";
+        char.style.webkitTextFillColor = "transparent";
+        char.style.backgroundClip = "text";
+      });
+
+      // Animation starten
+      anime({
+        targets: chars,
+        translateY: [
+          { value: "-2.75rem", easing: "easeOutExpo", duration: 600 },
+          { value: 0, easing: "easeOutBounce", duration: 800, delay: 100 },
+        ],
+        rotate: {
+          value: "-1turn",
+          delay: 0,
+        },
+        delay: anime.stagger(50),
+        easing: "easeInOutCirc",
+        loop: true,
+        loopDelay: 1000,
+      });
+    </script>
+    <script src="/assets/js/ui.js"></script>
+    <script src="/assets/js/load-header.js"></script>
+    <script src="/assets/js/load-footer.js"></script>
+    <script src="/assets/js/load-projects.js"></script>
+  </body>
+</html>

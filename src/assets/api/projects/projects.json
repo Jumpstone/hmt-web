@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "clan",
+      "title": "Clan",
+      "description": "HMT Clan:",
+      "features": [
+        "Projekte",
+        "Discord",
+        "Gaming"
+
+      ],
+      "cardClass": "toollab-card"
+    }
+  ]
+}
