@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0f;
+  color: #e8e8e8;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header {
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.tagline {
+  font-size: 1.125rem;
+  color: #a0a0a8;
+  font-weight: 400;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  color: #c0c0c8;
+}
+
+.meta-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.info-card {
+  background: #131318;
+  border: 1px solid #1f1f28;
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: border-color 0.2s ease;
+}
+
+.info-card:hover {
+  border-color: #2a2a38;
+}
+
+.info-card-label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #808088;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-card-value {
+  font-size: 1.125rem;
+  color: #e8e8e8;
+  font-weight: 500;
+}
+
+.location-box {
+  background: linear-gradient(135deg, #1a1a24 0%, #131318 100%);
+  border: 1px solid #2a2a38;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.location-label {
+  font-size: 0.9375rem;
+  color: #a0a0a8;
+  font-weight: 500;
+}
+
+.coordinates {
+  font-family: "SF Mono", "Monaco", "Courier New", monospace;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.calendar-container {
+  background: #131318;
+  border: 1px solid #1f1f28;
+  border-radius: 12px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}
+
+.playlist-section {
+  background: linear-gradient(135deg, #1a1a24 0%, #131318 100%);
+  border: 1px solid #2a2a38;
+  border-radius: 12px;
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.playlist-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.playlist-desc {
+  font-size: 1.0625rem;
+  color: #a0a0a8;
+  margin-bottom: 40px;
+}
+
+.spotify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1db954;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.spotify-btn:hover {
+  background: #1ed760;
+  transform: translateY(-1px);
+}
+
+.spotify-icon {
+  width: 24px;
+  height: 24px;
+}
+
+footer {
+  padding: 80px 0 48px;
+  text-align: center;
+  border-top: 1px solid #1f1f28;
+  margin-top: 120px;
+}
+
+footer p {
+  color: #606068;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 80px 0 60px;
+  }
+
+  .title-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    order: -1;
+  }
+
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .playlist-section {
+    padding: 48px 24px;
+  }
+
+  .location-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calendar-container iframe {
+    height: 500px;
+  }
+}
